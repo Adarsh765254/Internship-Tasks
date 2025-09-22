@@ -1,0 +1,31 @@
+Starting Nmap 7.98 ( https://nmap.org ) at 2025-09-22 13:33 +0530
+Nmap scan report for jiofiber.local.html (192.168.31.1)
+Host is up (0.0039s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT     STATE SERVICE
+53/tcp   open  domain
+80/tcp   open  http
+443/tcp  open  https
+7443/tcp open  oracleas-https
+8080/tcp open  http-proxy
+8443/tcp open  https-alt
+MAC Address: 3C:55:DB:A4:A1:D9 (Shenzhen Skyworth Digital  Technology)
+
+Nmap scan report for SetTopBox-2894.lan (192.168.31.36)
+Host is up (0.0097s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE
+2869/tcp open  icslap
+MAC Address: 3C:55:DB:94:39:86 (Shenzhen Skyworth Digital  Technology)
+
+Nmap scan report for Adarsh.lan (192.168.31.80)
+Host is up (0.0023s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+8000/tcp open  http-alt
+8089/tcp open  unknown
+
+Nmap done: 256 IP addresses (3 hosts up) scanned in 40.60 seconds
