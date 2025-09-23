@@ -48,7 +48,6 @@ This report provides a detailed technical analysis of a phishing email titled "Y
 ## Email Body Analysis
 
 | Assessment Category | Status |
-|-------------------|--------|
 | Email is Poorly Written | ❌ NO |
 | Creating the Sense of Urgency | ✅ YES |
 | Asking You to Click on Link | ✅ YES |
@@ -57,7 +56,6 @@ This report provides a detailed technical analysis of a phishing email titled "Y
 ## Sender Analysis
 
 | Category | Status |
-|----------|--------|
 | Domain of the Sender is Authorized to Send Email | ❌ NO |
 | Reputation of the Sender | ⚠️ SUSPICIOUS |
 | Reputation of the IP | ⚠️ SUSPICIOUS |
@@ -65,14 +63,12 @@ This report provides a detailed technical analysis of a phishing email titled "Y
 ## Header Analysis
 
 | Protocol | Status | Impact |
-|----------|--------|--------|
 | SPF | ❌ FAIL | CRITICAL |
 | DKIM | ✅ PASS | LIMITED |
 | DMARC | ❌ FAIL | CRITICAL |
 | SCL | - | - |
 | BCL | - | - |
 
----
 
 ## 1. Sender Email Address Analysis
 
@@ -100,7 +96,6 @@ Authentication failures indicate either:
 - Compromised legitimate email infrastructure
 - Intentionally misconfigured domain for malicious purposes
 
----
 
 ## 2. Email Headers Technical Analysis
 
@@ -136,25 +131,24 @@ Authentication failures indicate either:
 3. **Timestamp Consistency**: Headers show consistent timing (2022-08-08T18:29:00Z)
 4. **Message-ID Format**: Legitimate Microsoft Exchange format but authentication failures raise concerns
 
----
 
 ## 3. Suspicious Links and Attachments Analysis
 
 ### HIGH-RISK URLs Identified
 
 #### 1. Primary Suspicious URL:
-```
+
 https://afo3.digitaloceanspaces.com/zakwebsettsr979hoj0qp859/%26%21%24%21%26%20k%21%21%21%21/%24%21%24%21%24%26%26%20zK%20k%21%21%21.html#al.bird@consilio.com
-```
+
 - **Risk Level**: CRITICAL
 - **Platform**: DigitalOcean Spaces (commonly abused by attackers)
 - **Encoding**: Heavy URL encoding to obfuscate destination
 - **Email Inclusion**: Contains sender's email address in URL fragment
 
 #### 2. Secondary URL:
-```
+
 https://www.consilio.com/consilio-data-protection-notice/
-```
+
 - **Risk Level**: MODERATE
 - **Purpose**: Appears to be privacy policy (could be legitimate or spoofed)
 
@@ -170,7 +164,6 @@ https://www.consilio.com/consilio-data-protection-notice/
 ### Link Analysis Summary
 The combination of authentication failures and suspicious cloud storage URLs with encoded parameters represents a classic phishing attack vector designed to harvest credentials or deliver malware.
 
----
 
 ## 4. Urgent/Threatening Language Analysis
 
@@ -194,7 +187,6 @@ The combination of authentication failures and suspicious cloud storage URLs wit
 ### Language Effectiveness Assessment
 The email successfully creates a plausible technical scenario that would concern users about missing important communications, demonstrating sophisticated social engineering designed to bypass user skepticism.
 
----
 
 ## 5. URL Mismatch Analysis
 
@@ -217,7 +209,6 @@ The heavily encoded URL structure with cloud storage hosting indicates:
 3. Obfuscation to prevent easy analysis
 4. Use of legitimate cloud services to appear trustworthy
 
----
 
 ## 6. Spelling and Grammar Assessment
 
@@ -235,7 +226,6 @@ The heavily encoded URL structure with cloud storage hosting indicates:
 
 The high quality of language and presentation makes this email particularly dangerous as it's more likely to bypass user suspicion compared to obviously poor-quality phishing attempts.
 
----
 
 ## 7. Comprehensive Phishing Traits Summary
 
@@ -277,7 +267,6 @@ The high quality of language and presentation makes this email particularly dang
 | DKIM | PASS | Limited - Only confirms integrity |
 | DMARC | FAIL | Critical - Policy violation |
 
----
 
 ## Conclusions and Incident Response Recommendations
 
@@ -322,7 +311,6 @@ This email represents a **sophisticated phishing attack** with multiple critical
 - **Attachment hashes**: Available for threat intelligence sharing
 - **Originating IP**: 18.184.203.244 (compromised or malicious)
 
----
 
 ## Technical Appendix
 
@@ -335,7 +323,6 @@ This email represents a **sophisticated phishing attack** with multiple critical
 ### Key Findings Summary
 The combination of authentication failures (SPF FAIL, DMARC FAIL) with sophisticated social engineering and malicious URLs represents a high-priority security threat requiring immediate attention and organizational response.
 
----
 
 ## Final Assessment
 
@@ -345,7 +332,6 @@ The combination of authentication failures (SPF FAIL, DMARC FAIL) with sophistic
 
 ### Confidence Level: 🔴 HIGH (95%)
 
----
 
 ## Usage Instructions
 
@@ -357,7 +343,9 @@ This README.md file contains the complete phishing email analysis report. To use
 4. **Reference hash values** for threat intelligence sharing
 5. **Implement recommended security measures** to prevent similar attacks
 
----
+### Files Uploaded
+- Screenshots of the scans  
+- PDF report of the analysis
 
 *Report generated using PhishTool, MXToolbox, and WHOIS analysis tools*  
 *Date: Based on email timestamp 2022-08-08T18:29:00Z*
