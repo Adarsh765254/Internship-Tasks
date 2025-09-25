@@ -349,3 +349,79 @@ This README.md file contains the complete phishing email analysis report. To use
 
 *Report generated using PhishTool, MXToolbox, and WHOIS analysis tools*  
 *Date: Based on email timestamp 2022-08-08T18:29:00Z*
+
+# Cybersecurity Internship - Task 3
+
+# Nessus Vulnerability Assessment — Adarsh.lan (IP Address)
+
+**Report:** Comprehensive Nessus Vulnerability Assessment Report  
+**Target:** `IP Address` (Adarsh.lan)  
+**OS:** Windows 11  
+**Scanner:** Nessus Essentials 10.9.4  
+**Scan Date:** 2025-09-25  
+**Report Version:** 1.0  
+**Classification:** Internal Use
+
+
+## Table of Contents
+- [Overview](#overview)
+- [Scope & Objective](#scope--objective)
+- [How to view the report files](#how-to-view-the-report-files)
+- [Summary of Findings](#summary-of-findings)
+- [Recommended Remediation (high level)](#recommended-remediation-high-level)
+- [Detailed Remediation Steps (copy-pasteable commands)](#detailed-remediation-steps-copy-pasteable-commands)
+- [Reproduce the Scan (steps)](#reproduce-the-scan-steps)
+- [Notes & Limitations](#notes--limitations)
+- [Next Steps & Roadmap](#next-steps--roadmap)
+- [Contact](#contact)
+- [Appendix: Files included](#appendix-files-included)
+
+
+## Overview
+This repository contains the README and pointers for the Nessus vulnerability assessment conducted against `adarsh.lan`IP Address). The attached full report (PDF) and any exported `.nessus`/`.nessusdb` exports contain complete scan details, screenshots, and plugin output.
+
+
+## Scope & Objective
+- **Scope:** Single host `IP Address` (Windows 11). Ports and services discovered by Nessus were analyzed.
+- **Objective:** Identify vulnerabilities, categorize by severity, and recommend prioritized mitigations to reduce risk and meet basic compliance requirements.
+
+
+## How to view the report files
+Open the included files in the repository (if provided):
+- `Nessus_Scan_Report.pdf` — human-readable executive summary + detailed findings (recommended for instructors/managers).
+- `scan_export.nessus` — XML export of scan results (importable into another Nessus instance).
+- `scan_export.nessusdb` — database export (for full history/metadata import).
+
+
+## Summary of Findings
+- **Total findings:** 45  
+  - Medium: 7 (15.6%)  
+  - Informational: 38 (84.4%)  
+  - High/Critical: 0
+- **Primary risk areas discovered:**
+  - SSL/TLS certificate issues (self-signed, mismatched hostnames) on Splunk and Nessus management interfaces (ports 8089, 8191, 8834).
+  - SMB signing not required (port 445).
+  - Several informational exposures (service banners, versions, open ports such as 135, 139, 8000).
+
+
+## Recommended Remediation (high level)
+1. **Replace self-signed certificates** with CA-issued certificates (internal CA or public CA as appropriate). Ensure correct CN and SAN entries.
+2. **Enable SMB signing** on Windows hosts to mitigate man-in-the-middle and tampering risks.
+3. **Restrict access** to management interfaces (Splunk, Nessus) using firewall rules and network segmentation (management VLAN).
+4. **Patch/update services** (e.g., upgrade Splunk to latest minor version).
+5. **Implement certificate lifecycle management** (monitor expirations and automate renewals).
+6. **Re-scan** after remediations and document results.
+
+
+## Detailed Remediation Steps (copy-pasteable commands)
+
+> **SSL/TLS** — Example PowerShell to create a properly SAN'd certificate (for testing/internal CA). Replace values and follow your CA process for production certificates:
+```powershell
+# Example: Create a self-signed cert with SANs (for lab/testing only)
+$dnsNames = @("adarsh.lan","adarsh","IP Address")
+New-SelfSignedCertificate -Subject "CN=adarsh.lan" -DnsName $dnsNames -NotAfter (Get-Date).AddYears(2) -KeyLength 2048 -CertStoreLocation cert:\LocalMachine\My
+
+### Files Uploaded
+- Screenshots of the scans  
+- PDF report of the analysis
+
