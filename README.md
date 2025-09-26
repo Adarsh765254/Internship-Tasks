@@ -426,38 +426,39 @@ New-SelfSignedCertificate -Subject "CN=adarsh.lan" -DnsName $dnsNames -NotAfter 
 - PDF report of the analysis
 
 
-# Cybersecurity Internship - Task 4
+# **Cybersecurity Internship - Task 4**
 
-## Objective
+## **Objective**
 Demonstrate how to create, test, and remove firewall rules in Windows using the GUI and PowerShell, and understand how firewall filters traffic.
 
-## Steps Performed
+## **Steps Performed**
 
-1. **Open Firewall Configuration Tool**
-   - Opened Windows Defender Firewall with Advanced Security (`wf.msc`).
+### 1. **Open Firewall Configuration Tool**
+- Opened Windows Defender Firewall with Advanced Security (`wf.msc`).
 
-2. **List Current Firewall Rules**
-   - Checked inbound rules in the GUI.
-   - Verified rules using PowerShell:
-     Get-NetFirewallRule
+### 2. **List Current Firewall Rules**
+- Checked inbound rules in the GUI.
+- Verified rules using PowerShell:
+Get-NetFirewallRule
 
-3. **Add Rule to Block Inbound Port 23 (Telnet)**
-   - GUI Steps:
-     - Inbound Rules → New Rule → Port → TCP → 23 → Block → Domain/Private/Public → Name: BlockTelnet
+### 3. **Add Rule to Block Inbound Port 23 (Telnet)**
+- GUI Steps:
+  - Inbound Rules → New Rule → Port → TCP → 23 → Block → Domain/Private/Public → Name: BlockTelnet
 
-4. **Test the Rule**
-   - PowerShell:
-     Test-NetConnection -ComputerName localhost -Port 23
-   - Output:
-     - `PingSucceeded: True` → machine reachable
-     - `TcpTestSucceeded: False` → port blocked by firewall
+### 4. **Test the Rule**
+- PowerShell:
+Test-NetConnection -ComputerName localhost -Port 23
 
-5. **Remove the Test Block Rule**
-   - GUI: Delete rule `BlockTelnet`
-   - PowerShell:
-     Remove-NetFirewallRule -DisplayName "BlockTelnet"
+- Output:
+  - `PingSucceeded: True` → machine reachable
+  - `TcpTestSucceeded: False` → port blocked by firewall
 
-7. **Commands / GUI Steps Used**
+### 5. **Remove the Test Block Rule**
+- GUI: Delete rule `BlockTelnet`
+- PowerShell:
+Remove-NetFirewallRule -DisplayName "BlockTelnet"
+
+### 6. **Commands / GUI Steps Used**
 | Task | Method / Command |
 |------|----------------|
 | List firewall rules | `Get-NetFirewallRule` |
@@ -465,19 +466,17 @@ Demonstrate how to create, test, and remove firewall rules in Windows using the 
 | Test port | `Test-NetConnection -ComputerName localhost -Port 23` |
 | Remove rule | `Remove-NetFirewallRule -DisplayName "BlockTelnet"` or GUI delete |
 
-## Summary
+## **Summary**
 - Firewall monitors inbound and outbound packets and filters based on rules.
 - Blocked ports are denied, allowed ports are permitted.
 - Default behavior: inbound mostly blocked, outbound mostly allowed.
 - Custom rules give precise control over network access.
 
-## Conclusion
+## **Conclusion**
 - Created, tested, and removed firewall rules successfully.
 - Demonstrated understanding of firewall operation and traffic filtering.
 - Completed assignment safely without installing Telnet.
 
-### Files Uploaded
-- Screenshots of the scans  
+## **Files Uploaded**
+- Screenshots of the scans
 - PDF report of the analysis
-
-
