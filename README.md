@@ -480,3 +480,70 @@ Remove-NetFirewallRule -DisplayName "BlockTelnet"
 ## **Files Uploaded**
 - Screenshots of the scans
 - PDF report of the analysis
+
+
+# **Cybersecurity Internship - Task 5**
+
+# Wireshark Packet Capture and Analysis
+
+## Overview
+This document summarizes the network traffic capture and analysis I performed using Wireshark. The task involved capturing packets on my active network interface, filtering protocols, and identifying different types of network communication.
+
+## Tools Used
+- **Wireshark** (Latest version installed)
+- **Npcap** (for packet capturing on Windows)
+- Web browser for generating traffic
+
+## Steps Completed
+
+1. **Wireshark Installation**
+   - Successfully installed Wireshark along with Npcap on my Windows system.
+
+2. **Captured Network Traffic**
+   - Started capturing on the active network interface (Wi-Fi).
+   - Generated traffic by visiting `http://neverssl.com`.
+
+3. **Stopped Capture**
+   - Stopped packet capture after 1 minutes of generating network traffic.
+
+4. **Filtered Packets by Protocol**
+   - Applied filters in Wireshark to analyze specific protocols:
+     - `http` – For web requests
+     - `dns` – For domain resolution
+     - `tcp` – For transport layer communication
+
+5. **Protocol Analysis**
+   - **HTTP:** Observed GET and POST requests from the browser.
+   - **DNS:** Captured queries and responses for domain name resolution.
+   - **TCP:** Checked connection setup (SYN, SYN-ACK, ACK) and port usage.
+
+6. **Packet Inspection**
+   - Analyzed packet details including source IP, destination IP, ports, and payload information.
+   - Noted patterns of communication and identified common services running on open ports.
+
+7. **Saved Capture**
+   - Saved the capture as `network_capture.pcap` for documentation and future reference.
+   - Exported filtered packets as `.txt` for reporting purposes.
+
+8. **Findings**
+   - Identified multiple protocols in the captured traffic.
+   - Observed normal web browsing traffic with no suspicious activity.
+   - Confirmed the network was functioning as expected with HTTP, DNS, and TCP communications.
+
+
+## Deliverables
+- `network_capture.pcap` – Complete packet capture
+- `filtered_packets.txt` – Exported filtered packet details
+- Summary of protocol analysis and observations
+
+
+## Notes
+- Only one browser tab was active during capture to reduce noise.
+- Wireshark was used safely, downloaded from the official website.
+
+
+## **Files Uploaded**
+- Screenshots of the scans
+- PDF report of the analysis
+
+
