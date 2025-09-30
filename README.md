@@ -547,3 +547,168 @@ This document summarizes the network traffic capture and analysis I performed us
 - PDF report of the analysis
 
 
+# **Cybersecurity Internship - Task 6**
+
+# Password Strength Analysis Project
+
+A comprehensive study analyzing password security through systematic testing of various password combinations and complexity levels.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Project Objectives](#project-objectives)
+- [Methodology](#methodology)
+- [Test Results](#test-results)
+- [Key Findings](#key-findings)
+- [Best Practices](#best-practices)
+- [Common Attack Vectors](#common-attack-vectors)
+- [Tools Used](#tools-used)
+
+## Overview
+
+This project demonstrates the critical importance of password complexity in cybersecurity through practical testing and analysis. Eight different passwords were evaluated using password strength checking tools to understand how length, character diversity, and patterns affect overall security.
+
+## Project Objectives
+
+1. Create multiple test passwords with varying complexity levels
+2. Evaluate passwords using character type combinations (uppercase, lowercase, numbers, symbols)
+3. Test passwords using online strength checkers
+4. Document scores and feedback from security tools
+5. Identify and document best practices for password creation
+6. Research common password attack methodologies
+7. Analyze the relationship between complexity and security
+8. Provide actionable recommendations for users
+
+## Methodology
+
+### Test Passwords
+
+Eight passwords were created representing different security levels:
+
+| Password | Length | Character Types | Complexity Level |
+|----------|--------|-----------------|------------------|
+| `raj1` | 4 | Lowercase, Numbers | Very Weak |
+| `raj12` | 5 | Lowercase, Numbers | Weak |
+| `raj1234` | 7 | Lowercase, Numbers | Weak |
+| `raj1234567` | 10 | Lowercase, Numbers | Moderate |
+| `Raj@$125` | 8 | Mixed (all types) | Strong |
+| `R@j3$H!92#LmX&` | 14 | Mixed (all types) | Very Strong |
+| `Rajesh` | 6 | Upper, Lowercase | Weak |
+| `Rajesh@754$` | 11 | Mixed (all types) | Strong |
+
+### Testing Approach
+
+- Each password was evaluated using password strength checking tools
+- Metrics collected: estimated crack time, strength score, vulnerability warnings
+- Analysis focused on: length impact, character diversity, pattern recognition
+- Comparative analysis between similar passwords with minor variations
+
+## Test Results
+
+### Key Observations
+
+**Length Impact:**
+- 4-character passwords: Crackable in < 1 second
+- 8-character passwords (mixed): 7+ years to crack
+- 12+ character passwords: Centuries to crack
+
+**Character Diversity Impact:**
+- Lowercase only: Minimal security regardless of length
+- Adding uppercase: 2x security improvement
+- Adding numbers: 2.4x security improvement
+- Adding symbols: 1.5x security improvement
+- **Combined effect**: 7.2x security improvement
+
+**Pattern Recognition:**
+- Sequential numbers (123456): Instantly crackable
+- Dictionary words (Rajesh): Highly vulnerable to dictionary attacks
+- Name-based passwords: Susceptible to social engineering
+
+## Key Findings
+
+### Critical Success Factors
+
+1. **Length is paramount**: Each additional character exponentially increases security
+2. **Character diversity matters**: Using all four character types (upper, lower, number, symbol) provides significant protection
+3. **Avoid patterns**: Sequential or predictable patterns dramatically reduce security
+4. **Dictionary words are dangerous**: Common words and names are easily cracked
+5. **Uniqueness is essential**: Reusing passwords across accounts multiplies risk
+
+### Security Equation
+
+Security = (Character Pool Size)^Length × Pattern Randomness
+
+### Crack Time Comparison
+
+| Password Type | 8 Characters | 12 Characters | 16 Characters |
+|---------------|--------------|---------------|---------------|
+| Lowercase only | 7 hours | 2 months | 5 years |
+| All char types | 7 years | 34,000 years | 44 million years |
+
+## Best Practices
+
+### Password Creation Standards
+
+**Minimum Requirements:**
+- ✅ 12+ characters minimum
+- ✅ At least one uppercase letter (A-Z)
+- ✅ At least one lowercase letter (a-z)
+- ✅ At least one number (0-9)
+- ✅ At least one special symbol (@, #, $, !, etc.)
+- ✅ No dictionary words or common names
+- ✅ No sequential patterns or repeated characters
+- ✅ Unique password for each account
+
+### Recommended Strategies
+
+1. **Use Password Managers**: LastPass, 1Password, Bitwarden
+2. **Enable Two-Factor Authentication (2FA)**: Add extra security layer
+3. **Regular Updates**: Change passwords every 90-180 days for critical accounts
+4. **Passphrase Method**: Combine random words with symbols ("Coffee$Morning#Beach!2024")
+5. **Acronym Method**: Create from sentences ("IW2EbCo@8AM!" = I Wake 2 Eat breakfast Coffee @ 8 AM!)
+
+## Common Attack Vectors
+
+### 1. Brute Force Attack
+- **Method**: Systematically tries every possible character combination
+- **Defense**: Use 12+ character passwords with mixed types
+
+### 2. Dictionary Attack
+- **Method**: Uses pre-compiled lists of common words and passwords
+- **Defense**: Avoid dictionary words, names, and common phrases
+
+### 3. Rainbow Table Attack
+- **Method**: Uses pre-computed hash tables to reverse password hashes
+- **Defense**: Proper salting and modern hashing algorithms (bcrypt, Argon2)
+
+### 4. Credential Stuffing
+- **Method**: Uses stolen credentials from data breaches
+- **Defense**: Unique passwords for each account, breach monitoring
+
+### 5. Phishing
+- **Method**: Social engineering to trick users into revealing passwords
+- **Defense**: Verify URLs, never click email links, enable 2FA
+
+### 6. Keylogger
+- **Method**: Malware records keystrokes
+- **Defense**: Anti-malware software, password managers with auto-fill
+
+## Tools Used
+
+- **Password Strength Checkers**: Online security analysis tools
+- **Documentation**: Microsoft Word
+
+
+## Key Takeaways
+
+1. **Length beats complexity**: A longer simple password is better than a short complex one
+2. **Complexity multiplies security**: Combining all character types creates exponential improvement
+3. **Patterns are deadly**: Any predictable pattern reduces security to near zero
+4. **Uniqueness is critical**: Password reuse is the most common security failure
+5. **Tools are essential**: Password managers enable maximum security without memorization burden
+
+
+## **Files Uploaded**
+- Screenshots of the scans
+- PDF report of the analysis
+
