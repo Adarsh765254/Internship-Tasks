@@ -712,3 +712,91 @@ Security = (Character Pool Size)^Length × Pattern Randomness
 - Screenshots of the scans
 - PDF report of the analysis
 
+
+# **Cybersecurity Internship - Task 7**
+
+# Browser Extension Management and Performance Analysis
+
+## Overview
+
+This project documents an exercise focused on understanding browser extensions, their impact on performance, and the potential threats posed by malicious extensions. The process involved managing extensions, conducting performance benchmarks, and researching security implications.
+
+## Project Objectives
+
+1.  Learn to spot and remove potentially harmful browser extensions.
+2.  Understand the impact of extensions on browser performance.
+3.  Research and document how malicious extensions can harm users.
+
+## Tools Used
+
+*   Google Chrome (or any modern web browser)
+*   Speedometer 2.1 (web browser benchmark tool)
+
+## Project Deliverables
+
+*   Documentation of steps taken to manage extensions.
+*   Performance benchmark results (before and after extension removal).
+*   Research on how malicious extensions can harm users.
+
+## Steps Taken and Findings
+
+### Part 1: Extension Management and Performance Testing
+
+1.  **Open your browser’s extension/add-ons manager.**
+    *   Accessed Google Chrome's extension management page (`chrome://extensions/`).
+
+2.  **Review all installed extensions carefully.**
+    *   Conducted a review of all currently active extensions within the browser.
+
+3.  **Check permissions and reviews for each extension.**
+    *   Inspected the permissions requested by extensions and briefly checked user reviews where applicable to identify any suspicious behavior or unnecessary access.
+
+4.  **Identify any unused or suspicious extensions.**
+    *   For the purpose of this exercise, the "Google Keep" extension was used as a benign example of an extension that could be added and then removed to observe performance impact.
+
+5.  **Remove suspicious or unnecessary extensions.**
+    *   The "Google Keep" extension was first installed (simulating an addition) and then subsequently removed as per the exercise's objective to manage extensions.
+
+6.  **Restart browser and check for performance improvements.**
+    *   The browser was restarted after the removal of the "Google Keep" extension.
+    *   **Performance Benchmark (Speedometer 2.1) Results:**
+        *   **With Google Keep installed:** `303 ± 15 (4.9%) runs/min`
+        *   **Without Google Keep installed:** `313 ± 14 (4.5%) runs/min`
+    *   **Observation:** A minor but measurable performance improvement was noted (an increase of 10 runs/min). This demonstrates that even safe and seemingly light extensions can consume resources and impact browser speed. Regularly reviewing and removing unused extensions can contribute to better performance.
+
+### Part 2: Research and Documentation
+
+7.  **Research how malicious extensions can harm users.**
+
+    Malicious browser extensions are a significant threat vector, often operating under the guise of legitimate tools. They can cause various harms:
+
+    *   **Data Theft and Privacy Invasion:**
+        *   **Tracking:** Monitor browsing activity, search queries, and online interactions.
+        *   **Credential Harvesting:** Employ keyloggers or fake forms to steal sensitive login credentials (e.g., banking, email, social media).
+        *   **Personal Data Access:** Access browser history, cookies, autofill data, and potentially data from other extensions.
+        *   **Adware & Pop-ups:** Inject unwanted advertisements, redirect to malicious sites, and generate intrusive pop-ups, often leading to further scams.
+
+    *   **Security Vulnerabilities:**
+        *   **Malware Distribution:** Act as a conduit to download and install other malware (e.g., viruses, ransomware, spyware).
+        *   **Phishing:** Alter legitimate webpages or inject content to trick users into revealing sensitive information.
+        *   **Cross-Site Scripting (XSS):** Exploit vulnerabilities to execute malicious scripts, leading to session hijacking or data manipulation.
+
+    *   **Performance Degradation and Browser Hijacking:**
+        *   **Slow Performance:** Consume significant system resources (CPU, RAM), causing the browser to slow down, crash, or become unresponsive.
+        *   **Browser Hijacking:** Change default browser settings (homepage, search engine, new tab page) without consent, redirecting traffic to attacker-controlled sites.
+        *   **Resource Exploitation:** Secretly use the user's computer for illicit activities like cryptocurrency mining or click fraud, increasing power consumption and degrading system performance.
+
+8.  **Document steps taken and extensions removed.**
+
+    *   **Documented Steps:** All steps from 1 to 7, including observations and research findings, have been documented in this `README.md` file.
+    *   **Extensions Involved (for demonstration):**
+        *   **Google Keep:** Installed temporarily for performance testing, then removed. (Note: Google Keep itself is a legitimate and safe extension, used here purely for the exercise's practical demonstration.)
+
+## Conclusion
+
+This exercise highlights the importance of regularly auditing installed browser extensions. Even seemingly harmless extensions can impact performance, and vigilance is crucial to prevent the installation of malicious ones that can severely compromise privacy, security, and system integrity. Always review an extension's permissions and user reviews before installation.
+
+## **Files Uploaded**
+- Screenshots of the scans
+- PDF report of the analysis
+
