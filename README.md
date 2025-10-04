@@ -800,3 +800,312 @@ This exercise highlights the importance of regularly auditing installed browser 
 - Screenshots of the scans
 - PDF report of the analysis
 
+
+# Cybersecurity Internship - Task 8
+
+# VPN Security and Privacy Analysis Project
+
+A comprehensive analysis of Virtual Private Network (VPN) technology through practical implementation, testing, and research using ProtonVPN.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Project Objectives](#project-objectives)
+- [Tools and Technologies](#tools-and-technologies)
+- [Testing Methodology](#testing-methodology)
+- [Key Findings](#key-findings)
+- [Setup Instructions](#setup-instructions)
+- [Test Results](#test-results)
+- [VPN Benefits](#vpn-benefits)
+- [VPN Limitations](#vpn-limitations)
+- [Security Features](#security-features)
+- [Performance Analysis](#performance-analysis)
+
+
+## Overview
+
+This project provides a hands-on exploration of VPN technology, demonstrating how Virtual Private Networks protect user privacy, encrypt communications, and impact browsing performance. Through systematic testing with ProtonVPN's free tier, the analysis covers IP masking, encryption verification, and real-world performance metrics.
+
+**Key Achievement**: Successfully demonstrated complete IP address masking, DNS leak protection, and quantified the performance trade-offs (8.4x slower load times) associated with VPN usage.
+
+## Project Objectives
+
+1. Understand VPN's role in privacy protection and secure communication
+2. Implement and configure a VPN client (ProtonVPN)
+3. Verify IP address masking and location spoofing
+4. Measure performance impact on browsing speed
+5. Research VPN encryption protocols and security features
+6. Document benefits and limitations of VPN technology
+7. Analyze trade-offs between privacy and performance
+
+## Tools and Technologies
+
+### VPN Service
+- **ProtonVPN Free Tier**
+  - Provider: Proton AG (Switzerland)
+  - Servers: Netherlands, Japan, United States
+  - Encryption: AES-256-GCM
+  - Protocol: OpenVPN UDP/TCP
+  - No bandwidth limits
+
+### Testing Tools
+- **IPLeak.net** - Comprehensive IP and DNS leak testing
+- **WhatIsMyIPAddress.com** - IP verification
+- **Cricbuzz.com** - Real-world website for performance testing
+- **Chrome DevTools** - Network performance measurement
+- **Speedometer 2.1** - Browser performance benchmarking
+
+### System Requirements
+- Operating System: Windows 11 / macOS / Linux
+- RAM: 4GB minimum (8GB+ recommended)
+- Storage: 500MB for VPN client
+- Internet Connection: Broadband recommended
+
+## Testing Methodology
+
+### Phase 1: Setup and Configuration
+1. Account creation on ProtonVPN
+2. VPN client download and installation
+3. Initial configuration and login
+4. Server selection (Netherlands)
+
+### Phase 2: Connection and Verification
+1. Connect to VPN server
+2. Capture connection details
+3. Verify IP address change using IPLeak.net
+4. Confirm DNS leak protection
+5. Check WebRTC leak prevention
+
+### Phase 3: Performance Testing
+1. Test website load time WITH VPN connected
+2. Test website load time WITHOUT VPN
+3. Document performance metrics
+4. Analyze speed differences
+
+### Phase 4: Research and Analysis
+1. Study VPN encryption protocols
+2. Research security features
+3. Analyze privacy mechanisms
+4. Document benefits and limitations
+
+## Key Findings
+
+### IP Masking Success
+| Parameter | Before VPN | With VPN (Netherlands) |
+|-----------|------------|------------------------|
+| **IP Address** | Your local IP | 185.159.157.XXX |
+| **Location** | Your city/country | Amsterdam, Netherlands |
+| **ISP** | Your ISP | M247 Europe SRL |
+| **DNS Servers** | ISP DNS | ProtonVPN DNS |
+
+### Performance Impact
+| Metric | Without VPN | With VPN | Difference |
+|--------|-------------|----------|------------|
+| **Load Time** | 1.08 seconds | 9.06 seconds | **8.4x slower** |
+| **DNS Lookup** | 0.02s | 0.45s | 22.5x slower |
+| **Connection** | 0.12s | 1.2s | 10x slower |
+
+### Security Verification
+- ✅ IP address completely masked
+- ✅ No DNS leaks detected
+- ✅ No WebRTC leaks detected
+- ✅ No IPv6 leaks detected
+- ✅ Geographic location successfully spoofed
+- ✅ ISP identity hidden
+
+## Setup Instructions
+
+### 1. ProtonVPN Account Creation
+
+# Visit ProtonVPN website
+https://protonvpn.com
+
+# Sign up for free account
+# No credit card required
+# Verify email address
+
+
+### 2. Download and Install
+
+**Windows:**
+
+# Download installer from ProtonVPN website
+# Run as Administrator
+# Follow installation wizard
+# Install TAP network adapter when prompted
+
+
+### 3. Connect to VPN
+
+1. Launch ProtonVPN application
+2. Log in with credentials
+3. Select server location (Netherlands for free tier)
+4. Click "Connect"
+5. Wait for connection confirmation (green indicator)
+
+### 4. Verify Connection
+
+# Visit verification websites
+https://ipleak.net
+https://whatismyipaddress.com
+
+# Check for:
+# - Changed IP address
+# - Changed geographic location
+# - No DNS leaks
+# - No WebRTC leaks
+
+## Test Results
+
+### IP Verification Results
+
+**IPLeak.net Test Results:**
+- IPv4 Address: Successfully masked to Netherlands IP
+- IPv6 Address: Properly handled (no leak)
+- DNS Servers: All queries through ProtonVPN DNS
+- WebRTC: No real IP exposed
+- Geolocation: Amsterdam, Netherlands
+- Torrent IP: Netherlands IP (protected)
+
+### Performance Test Results
+
+**Cricbuzz.com Load Test:**
+
+**With VPN Connected (Netherlands):**
+- Total Load Time: 9.06 seconds
+- DOMContentLoaded: 6.24 seconds
+- Total Requests: 127
+- Data Transferred: 3.2 MB
+
+**Without VPN (Direct Connection):**
+- Total Load Time: 1.08 seconds
+- DOMContentLoaded: 0.68 seconds
+- Total Requests: 127
+- Data Transferred: 3.2 MB
+
+**Analysis:** VPN adds approximately 8 seconds of latency due to:
+- Geographic routing (data travels to Netherlands)
+- Encryption/decryption overhead
+- Free tier server congestion
+- Additional network hops
+
+## VPN Benefits
+
+### Privacy Protection
+- **IP Address Masking**: Hide your real location and identity
+- **ISP Monitoring Prevention**: ISP cannot see browsing activity
+- **Third-Party Tracking Reduction**: Websites cannot track across sessions
+- **Government Surveillance Evasion**: Traffic encrypted from local monitoring
+
+### Security Enhancement
+- **Data Encryption**: AES-256 military-grade encryption
+- **Public Wi-Fi Protection**: Secure on untrusted networks
+- **Man-in-the-Middle Prevention**: Encrypted tunnel blocks interception
+- **DNS Leak Protection**: All DNS queries secured
+
+### Access and Freedom
+- **Geo-Restriction Bypass**: Access region-locked content
+- **Censorship Circumvention**: Access blocked websites
+- **Price Discrimination Avoidance**: Compare prices across regions
+
+## VPN Limitations
+
+### Performance Impact
+- **Speed Reduction**: 8.4x slower in our test
+- **Increased Latency**: Additional routing distance
+- **Server Load**: Free tier servers more congested
+- **Gaming Impact**: High latency affects real-time games
+
+### Technical Limitations
+- **Not Complete Anonymity**: VPN provider can see traffic
+- **Trust Requirement**: Must trust VPN provider's no-logs policy
+- **Potential Blocks**: Some services block VPN connections
+- **Bandwidth Costs**: Some providers limit free tier speeds
+
+### Legal and Practical
+- **Not Above the Law**: Illegal activity still illegal with VPN
+- **May Violate ToS**: Some services prohibit VPN use
+- **Battery Drain**: Mobile devices consume more power
+- **Learning Curve**: Setup and configuration required
+
+## Security Features
+
+### Encryption Technology
+- **Algorithm**: AES-256-GCM (military-grade)
+- **Key Length**: 256-bit encryption keys
+- **Protocol**: OpenVPN UDP/TCP, IKEv2, WireGuard
+- **Handshake**: RSA-4096 for key exchange
+
+### Privacy Features
+- **No-Logs Policy**: No browsing history stored
+- **Kill Switch**: Blocks traffic if VPN drops
+- **DNS Leak Protection**: Forces DNS through VPN
+- **Perfect Forward Secrecy**: Unique keys per session
+- **Swiss Jurisdiction**: Strong privacy laws
+
+### Advanced Protection
+- **Split Tunneling**: Choose which apps use VPN
+- **Secure Core**: Multi-hop routing (paid tier)
+- **Tor Over VPN**: Maximum anonymity (paid tier)
+- **NetShield**: Ad and malware blocking
+
+## Performance Analysis
+
+### Speed Impact Factors
+
+**1. Geographic Distance**
+- Traffic must travel to VPN server location
+- Netherlands server adds ~5,000+ km round trip
+- Physical distance creates unavoidable latency
+
+**2. Encryption Overhead**
+- Every packet encrypted/decrypted
+- AES-256 processing time
+- Minimal but measurable CPU usage
+
+**3. Server Load**
+- Free tier servers shared with many users
+- Peak time congestion
+- Paid users get priority
+
+**4. Network Routing**
+- Less optimal routing paths
+- Additional network hops
+- Potential ISP throttling of VPN traffic
+
+### Optimization Tips
+- Choose geographically closer servers
+- Try WireGuard protocol (faster)
+- Use split tunneling for speed-critical apps
+- Consider paid tier for faster servers
+- Test different server locations
+
+## Use Cases
+
+### When to Use VPN
+
+**High Priority:**
+- Public Wi-Fi connections (cafes, airports, hotels)
+- Online banking and financial transactions
+- Accessing sensitive work documents
+- Political activism or journalism
+- Traveling in restrictive countries
+
+**Medium Priority:**
+- General web browsing for privacy
+- Streaming geo-restricted content
+- Avoiding ISP tracking
+- Price comparison shopping
+- Bypassing workplace restrictions
+
+**Low Priority / Consider Disabling:**
+- Online gaming (latency sensitive)
+- Large file downloads (speed important)
+- Video streaming in 4K (bandwidth intensive)
+- Local network access
+- Speed test measurements
+
+
+## **Files Uploaded**
+- Screenshots of the scans
+- PDF report of the analysis
