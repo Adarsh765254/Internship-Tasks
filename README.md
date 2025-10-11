@@ -1109,3 +1109,77 @@ https://whatismyipaddress.com
 ## **Files Uploaded**
 - Screenshots of the scans
 - PDF report of the analysis
+
+
+Projects
+
+Project 4 - Password Strength Analyzer with Custom Wordlist Generator
+
+
+A simple and effective **Python project** that analyzes password strength and generates a **custom wordlist** using user-provided clues. Includes both **Command-Line Interface (CLI)** and **Graphical User Interface (GUI)** versions.
+
+## 🔧 Features
+
+* Check password strength using the **zxcvbn** algorithm
+* Create personalized wordlists with names, years, pets, etc.
+* Supports **leet (1337)** substitutions and year combinations
+* Easy-to-use **Tkinter GUI** and **CLI** support
+* Saves results and generated wordlists to text files
+
+## ⚙️ Installation
+
+### 1️⃣ Prerequisites
+
+* **Python 3.8+** installed ([Download Here](https://www.python.org/downloads/))
+* Internet connection to install required libraries
+
+### 2️⃣ Install Dependencies
+
+pip install zxcvbn nltk argparse tk
+
+## 🖥️ How to Use
+
+### 🔹 CLI Mode
+
+python password_analyzer.py --password MyPass123 --clues Adarsh Dog 2001 --out mylist.txt --max 500
+
+**Example Output:**
+
+Password: MyPass123
+Score (0-4): 3
+Estimated crack time: 3 hours
+Suggestions: Add another word or symbol for more strength
+Wordlist saved to 'mylist.txt' (total 198 entries)
+
+### 🔹 GUI Mode
+
+python gui_password_analyzer.py
+
+Steps:
+
+1. Enter your password.
+2. Add clues separated by commas (e.g., `adarsh, dog, 2001`).
+3. Click **Run Analyzer**.
+4. Choose where to save your wordlist.
+
+## 📁 Folder Structure
+
+PasswordAnalyzer/
+│
+├── password_analyzer.py       # Command-line tool
+├── gui_password_analyzer.py   # GUI version
+├── wordlist_utils.py          # Wordlist generation logic
+└── custom_wordlist.txt        # Output file (example)
+
+## 📚 Libraries Used
+
+* **zxcvbn** → Password strength estimator
+* **tkinter** → GUI creation
+* **nltk** → Text processing support
+* **argparse** → Command-line arguments
+
+## ⚠️ Notes
+
+* Use only on **your own passwords or test systems**.
+* Avoid scanning or analyzing others’ passwords without permission.
+
