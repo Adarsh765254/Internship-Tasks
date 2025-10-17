@@ -48,24 +48,24 @@ This report provides a detailed technical analysis of a phishing email titled "Y
 ## Email Body Analysis
 
 | Assessment Category | Status |
-| Email is Poorly Written | ❌ NO |
-| Creating the Sense of Urgency | ✅ YES |
-| Asking You to Click on Link | ✅ YES |
-| Impersonating Any Brand | ✅ YES |
+| Email is Poorly Written | NO |
+| Creating the Sense of Urgency | YES |
+| Asking You to Click on Link | YES |
+| Impersonating Any Brand | YES |
 
 ## Sender Analysis
 
 | Category | Status |
-| Domain of the Sender is Authorized to Send Email | ❌ NO |
-| Reputation of the Sender | ⚠️ SUSPICIOUS |
-| Reputation of the IP | ⚠️ SUSPICIOUS |
+| Domain of the Sender is Authorized to Send Email | NO |
+| Reputation of the Sender | SUSPICIOUS |
+| Reputation of the IP | SUSPICIOUS |
 
 ## Header Analysis
 
 | Protocol | Status | Impact |
-| SPF | ❌ FAIL | CRITICAL |
-| DKIM | ✅ PASS | LIMITED |
-| DMARC | ❌ FAIL | CRITICAL |
+| SPF | FAIL | CRITICAL |
+| DKIM | PASS | LIMITED |
+| DMARC | FAIL | CRITICAL |
 | SCL | - | - |
 | BCL | - | - |
 
@@ -328,9 +328,9 @@ The combination of authentication failures (SPF FAIL, DMARC FAIL) with sophistic
 
 **This email should be treated as a confirmed phishing attempt and handled according to security incident response procedures.**
 
-### Risk Score: 🔴 CRITICAL (9.5/10)
+### Risk Score: CRITICAL (9.5/10)
 
-### Confidence Level: 🔴 HIGH (95%)
+### Confidence Level: HIGH (95%)
 
 
 ## Usage Instructions
@@ -650,14 +650,14 @@ Security = (Character Pool Size)^Length × Pattern Randomness
 ### Password Creation Standards
 
 **Minimum Requirements:**
-- ✅ 12+ characters minimum
-- ✅ At least one uppercase letter (A-Z)
-- ✅ At least one lowercase letter (a-z)
-- ✅ At least one number (0-9)
-- ✅ At least one special symbol (@, #, $, !, etc.)
-- ✅ No dictionary words or common names
-- ✅ No sequential patterns or repeated characters
-- ✅ Unique password for each account
+- 12+ characters minimum
+- At least one uppercase letter (A-Z)
+- At least one lowercase letter (a-z)
+- At least one number (0-9)
+- At least one special symbol (@, #, $, !, etc.)
+- No dictionary words or common names
+- No sequential patterns or repeated characters
+- Unique password for each account
 
 ### Recommended Strategies
 
@@ -906,12 +906,12 @@ This project provides a hands-on exploration of VPN technology, demonstrating ho
 | **Connection** | 0.12s | 1.2s | 10x slower |
 
 ### Security Verification
-- ✅ IP address completely masked
-- ✅ No DNS leaks detected
-- ✅ No WebRTC leaks detected
-- ✅ No IPv6 leaks detected
-- ✅ Geographic location successfully spoofed
-- ✅ ISP identity hidden
+- IP address completely masked
+- No DNS leaks detected
+- No WebRTC leaks detected
+- No IPv6 leaks detected
+- Geographic location successfully spoofed
+- ISP identity hidden
 
 ## Setup Instructions
 
@@ -1118,7 +1118,7 @@ Project 4 - Password Strength Analyzer with Custom Wordlist Generator
 
 A simple and effective **Python project** that analyzes password strength and generates a **custom wordlist** using user-provided clues. Includes both **Command-Line Interface (CLI)** and **Graphical User Interface (GUI)** versions.
 
-## 🔧 Features
+## Features
 
 * Check password strength using the **zxcvbn** algorithm
 * Create personalized wordlists with names, years, pets, etc.
@@ -1126,20 +1126,20 @@ A simple and effective **Python project** that analyzes password strength and ge
 * Easy-to-use **Tkinter GUI** and **CLI** support
 * Saves results and generated wordlists to text files
 
-## ⚙️ Installation
+## Installation
 
-### 1️⃣ Prerequisites
+### Prerequisites
 
 * **Python 3.8+** installed ([Download Here](https://www.python.org/downloads/))
 * Internet connection to install required libraries
 
-### 2️⃣ Install Dependencies
+### Install Dependencies
 
 pip install zxcvbn nltk argparse tk
 
-## 🖥️ How to Use
+## How to Use
 
-### 🔹 CLI Mode
+### CLI Mode
 
 python password_analyzer.py --password MyPass123 --clues Adarsh Dog 2001 --out mylist.txt --max 500
 
@@ -1151,7 +1151,7 @@ Estimated crack time: 3 hours
 Suggestions: Add another word or symbol for more strength
 Wordlist saved to 'mylist.txt' (total 198 entries)
 
-### 🔹 GUI Mode
+### GUI Mode
 
 python gui_password_analyzer.py
 
@@ -1162,7 +1162,7 @@ Steps:
 3. Click **Run Analyzer**.
 4. Choose where to save your wordlist.
 
-## 📁 Folder Structure
+## Folder Structure
 
 PasswordAnalyzer/
 │
@@ -1171,15 +1171,89 @@ PasswordAnalyzer/
 ├── wordlist_utils.py          # Wordlist generation logic
 └── custom_wordlist.txt        # Output file (example)
 
-## 📚 Libraries Used
+## Libraries Used
 
 * **zxcvbn** → Password strength estimator
 * **tkinter** → GUI creation
 * **nltk** → Text processing support
 * **argparse** → Command-line arguments
 
-## ⚠️ Notes
+## Notes
 
 * Use only on **your own passwords or test systems**.
 * Avoid scanning or analyzing others’ passwords without permission.
 
+
+## **Files Uploaded**
+- Screenshots and Recordings
+- PDF of the project report
+
+
+
+Project 13 -  Steganography Tool for Image/File Hiding
+
+A Python-based GUI application that allows you to **hide secret text messages inside images** using the **Least Significant Bit (LSB)** technique.  
+Built with **Tkinter** and **Pillow**, this project demonstrates the fundamentals of steganography and GUI programming in Python.
+
+## Installation
+
+### 1. Check Python Installation
+
+python --version
+
+If Python is not installed, get it from [python.org/downloads](https://www.python.org/downloads/).
+*Remember to check “Add Python to PATH” during installation.*
+
+### 2. Install Required Library
+
+pip install Pillow
+
+### 3. Clone or Create Project
+
+mkdir steganography_project
+cd steganography_project
+
+### 4. Add the Script
+
+Create a file named **`steganography.py`** and paste the full project code inside.
+
+## Run the Application
+
+python steganography.py
+
+If everything is set up correctly, the GUI will open with two tabs:
+
+* **Encode Message**
+* **Decode Message**
+
+## Usage Guide
+
+### To Encode (Hide a Message)
+
+1. Click **“Select Image”** and choose an image file (e.g., `test.png`)
+2. Enter your secret message
+3. Click **“Hide Message”**
+4. Save the new file (e.g., `encoded_test.png`)
+
+You’ll get a success confirmation — the new image now contains your secret message.
+
+### To Decode (Extract the Message)
+
+1. Click **“Decode Message”** tab
+2. Select the **encoded image** (`encoded_test.png`)
+3. Click **“Extract Message”**
+4. Your hidden text will appear in the text box
+
+## Example Project Structure
+
+steganography_project/
+│
+├── steganography.py        # Main Python file
+├── test.png                # Original image
+├── encoded_test.png        # Encoded image with hidden text
+└── README.md               # Documentation
+
+
+## **Files Uploaded**
+- Screenshots and Recordings
+- PDF of the project report
